@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: veterinaria_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: institutoweb
+      MYSQL_DATABASE: veterinaria
+      MYSQL_USER: testing3
+      MYSQL_PASSWORD: institutoweb
+    volumes:
+      - ./mysql:/var/lib/mysql
+    ports:
+      - "3304:3306"
